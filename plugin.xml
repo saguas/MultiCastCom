@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.phonegap.plugins.PushPlugin"
+    version="2.0.3">
+
+    <name>MulticastCom</name>
+	<author>Luis Fernandes</author>
+	
+	<description>
+		This plugin allows your application to receive push notifications on both Android and iOS devices. Both devices uses multicast protocol implementation.
+	</description>
+
+	<license>MIT</license>
+
+	<asset src="www/MulticastCom.js" target="MulticastCom.js" />
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>	
+	
+	<!-- android -->
+	<platform name="android">
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="MulticastCom" >
+				<param name="android-package" value="com.lfmf.net.multicastcom.MulticastCom"/>
+			</feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+			<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+			<uses-permission android:name="android.permission.WAKE_LOCK" />
+			<uses-permission android:name="android.permission.INTERNET" />
+		</config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:name="com.lfmf.net.multicastcom.MulticastComActivity"/>
+			<service android:name="com.lfmf.net.multicastcom.MulticastComService" />
+		</config-file>
+
+
+		<source-file src="src/android/com/lfml/net/multicastcom/MulticastComService.java" target-dir="src/android/com/lfml/net/multicastcom/" />
+		<source-file src="src/android/com/lfml/net/multicastcom/MulticastComActivity.java" target-dir="src/android/com/lfml/net/multicastcom/" />
+		<source-file src="src/android/com/lfml/net/multicastcom/MulticastCom.java" target-dir="src/android/com/lfml/net/multicastcom/" />
+		<source-file src="src/android/com/plugin/gcm/PushPlugin.java" target-dir="src/android/com/lfml/net/multicastcom/" />
+		<source-file src="src/android/com/lfml/net/multicastcom/android-support-v13.jar" target-dir="libs/" />
+		
+	</platform>
+</plugin>
