@@ -23,7 +23,7 @@ public class MulticastComActivity extends Activity
         Log.d(TAG, "MyActivityTeste onCreate : isPushPluginActive " + isPushPluginActive);
         processPushBundle(isPushPluginActive);
         
-        MyServiceTeste.cancelNotification(this);
+        MulticastComService.cancelNotification(this);
         
         finish();
         
