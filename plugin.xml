@@ -41,11 +41,10 @@
 		</config-file>
 
 
-		<source-file src="src/android/com/lfml/net/multicastcom/MulticastComService.java" target-dir="src/android/com/lfml/net/multicastcom/" />
-		<source-file src="src/android/com/lfml/net/multicastcom/MulticastComActivity.java" target-dir="src/android/com/lfml/net/multicastcom/" />
-		<source-file src="src/android/com/lfml/net/multicastcom/MulticastCom.java" target-dir="src/android/com/lfml/net/multicastcom/" />
-		<source-file src="src/android/com/plugin/gcm/PushPlugin.java" target-dir="src/android/com/lfml/net/multicastcom/" />
-		<source-file src="src/android/com/lfml/net/multicastcom/android-support-v13.jar" target-dir="libs/" />
+		<source-file src="src/android/com/lfmf/net/multicastcom/MulticastComService.java" target-dir="src/android/com/lfml/net/multicastcom/" />
+		<source-file src="src/android/com/lfmf/net/multicastcom/MulticastComActivity.java" target-dir="src/android/com/lfml/net/multicastcom/" />
+		<source-file src="src/android/com/lfmf/net/multicastcom/MulticastCom.java" target-dir="src/android/com/lfml/net/multicastcom/" />
+		<source-file src="src/android/com/lfmf/net/multicastcom/android-support-v13.jar" target-dir="libs/" />
 		
 	</platform>
 </plugin>
