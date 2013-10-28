@@ -56,7 +56,7 @@ package com.lfmf.net.multicastcom;
         
         @Override
         public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-            if (action.equals("echo")) {
+            if (action.equals("multicast")) {
                 gwebView = this.webView;
                 this.callbackContext = callbackContext;
                 final String message = args.getString(0);
@@ -102,7 +102,7 @@ package com.lfmf.net.multicastcom;
                 //this.server(callbackContext);
                 Context context = getApplicationContext();
                 Log.d(TAG, "echo - context: " + context);
-                Intent service = new Intent(context, MyServiceTeste.class);
+                Intent service = new Intent(context, MulticastComService.class);
                 context.startService(service);
                 //this.multicastServer(callbackContext);
                 //callbackContext.success(message);
