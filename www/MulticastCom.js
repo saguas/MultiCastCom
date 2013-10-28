@@ -16,7 +16,7 @@ MulticastCom.prototype.register = function(successCallback, errorCallback, optio
         return
     }
 
-	cordova.exec(successCallback, errorCallback, "MulticastCom", "register", [options]);
+	cordova.exec(successCallback, errorCallback, "multicast", "register", [options]);
 };
 
 // Call this to unregister for push notifications
@@ -33,7 +33,7 @@ MulticastCom.prototype.unregister = function(successCallback, errorCallback) {
         return
     }
 
-     cordova.exec(successCallback, errorCallback, "MulticastCom", "unregister", []);
+     cordova.exec(successCallback, errorCallback, "multicast", "unregister", []);
 };
 
 //-------------------------------------------------------------------
